@@ -3,7 +3,6 @@ from .models import Curso, Avaliacao
 
 
 class AvaliacaoSerializer(serializers.ModelSerializer):
-
     class Meta:
         # não sera mostrado na hora da consulta
         extra_kwargs = {
@@ -23,6 +22,20 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
 
 
 class CursoSerializer(serializers.ModelSerializer):
+    # Aqui mandamos todas as avalições para leitura de uma vez
+    # avaliacoes = AvaliacaoSerializer(many=True, read_only=True)
+
+    """
+    # HyperLinked Related Field
+    avaliacoes = serializers.HyperlinkedIdentityField(
+        many=True,
+        read_only=True,
+        view_name='avaliacao-detail'
+    )
+    """
+
+    # Primary Key Related Field
+    avaliacoes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Curso
@@ -31,5 +44,6 @@ class CursoSerializer(serializers.ModelSerializer):
             'titulo',
             'url',
             'criacao',
-            'ativo'
+            'ativo',
+            'avaliacoes'  # adciona a variavelcriada acima
         )
