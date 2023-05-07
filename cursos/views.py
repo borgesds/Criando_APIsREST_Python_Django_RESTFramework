@@ -76,7 +76,7 @@ class CursosViewSet(viewsets.ModelViewSet):
         serializer = AvaliacaoSerializer(avaliacoes, many=True)
         return Response(serializer.data)
 
-
+# s
 """
 class AvaliacaoViewSet(viewsets.ModelViewSet):
     queryset = Avaliacao.objects.all()
