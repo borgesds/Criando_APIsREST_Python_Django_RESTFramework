@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 
-Token: 3f650c7bf0f7db344b5da4b4dc26148a1cfce444
+Token borges: 3f650c7bf0f7db344b5da4b4dc26148a1cfce444
+Token carla:  d5e90363593da660a4fe3a543b4dbfacfad2c150
 """
 import os.path
 from pathlib import Path
