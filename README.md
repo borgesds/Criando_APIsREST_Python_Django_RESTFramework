@@ -9,7 +9,7 @@ Desta forma a comunicação entre sua aplicação web e aplicações mobile fica
 
 Não perca tempo e tire suas ideias do papel!
 
-No projeto você encontra:
+No projeto você vai encontrar:
 
 
 - APIs para os métodos HTTP GET, POST, PUT e DELETE;
